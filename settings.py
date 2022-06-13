@@ -133,8 +133,12 @@ LOGOUT_REDIRECT_URL = '/'
 
 # from: https://stackoverflow.com/questions/36760549/python-django-youre-using-the-staticfiles-app-without-having-set-the-static-ro
 #STATIC_ROOT = BASE_DIR / 'static'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
