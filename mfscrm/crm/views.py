@@ -4,6 +4,9 @@ from .models import *
 from .forms import *
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
+from django.db.models import Sum
+from _decimal import Decimal
+
 
 
 
