@@ -157,3 +157,10 @@ def summary(request, pk):
                               'services': services,
                               'sum_service_charge': sum_service_charge,
                               'sum_product_charge': sum_product_charge,})
+
+
+@login_required
+def service_delete(request, pk):
+   service = get_object_or_404(Service, pk=pk)
+   service.delete()
+   return redirect('crm:service_list')
