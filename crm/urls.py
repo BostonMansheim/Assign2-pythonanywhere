@@ -1,8 +1,6 @@
 # from django.conf.urls import url
 from . import views
 from django.urls import path, re_path
-from django.conf import settings
-from django.conf.urls.static import static
 
 app_name = 'crm'
 urlpatterns = [
@@ -21,4 +19,4 @@ urlpatterns = [
     path('product/<int:pk>/delete', views.product_delete, name='product_delete'),
     path('customer/<int:pk>/summary/', views.summary, name='summary'),
     path('customer/<int:pk>/summary/', views.summary, name='summary'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
